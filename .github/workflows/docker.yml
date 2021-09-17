@@ -43,4 +43,4 @@ jobs:
           build-args: |
             PYTHON_VERSION=${{ matrix.python }}
             ALPINE_VERSION=${{ matrix.alpine }}
-            PDM_VERSION=${{ matrix.gitlab }}
+            GITLAB_CLI_VERSION=${{ matrix.gitlab }}
