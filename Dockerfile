@@ -12,7 +12,8 @@ RUN apk add --no-cache --virtual .build-deps alpine-sdk python3-dev libffi-dev o
     && apk del .build-deps \
     && adduser -h /home/gitlab-cli -s /bin/sh -u 1000 -D gitlab-cli \
     && passwd -u gitlab-cli \
-    && chmod a+x /bin/build-gitlab-cfg
+    && chmod a+x /bin/build-gitlab-cfg \
+    && apk add jq
     
 WORKDIR /home/gitlab-cli
 
