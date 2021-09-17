@@ -1,0 +1,14 @@
+#/bin/sh
+
+cat > /home/gitlab-cli/.python-gitlab.cfg <<EOF
+[global]
+default = gitlab
+ssl_verify = true
+timeout = 10
+
+[gitlab]
+url = ${CI_SERVER_URL}
+private_token = ${CI_JOB_TOKEN}
+api_version = 4
+
+EOF
